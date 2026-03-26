@@ -44,8 +44,6 @@ nav.profiles {
 }
 
 .profile {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   padding: 0.8rem;
   cursor: pointer;
@@ -57,8 +55,6 @@ nav.profiles {
 .profile:hover,
 .profile:focus-visible {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-  border-color: rgba(229, 9, 20, 0.6);
   outline: none;
 }
 
@@ -71,6 +67,10 @@ nav.profiles {
   border-radius: 10px;
   display: block;
   border: 2px solid transparent;
+}
+
+img:hover {
+    border-color: rgba(255, 255, 255, 0.98);
 }
 
 .profile figcaption {
