@@ -14,13 +14,13 @@ body {
 }
 
 main {
-  width: min(960px, 90vw);
+  width: min(960px, 95vw);
   text-align: center;
-  padding: 2rem;
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
 header h1 {
-  font-size: clamp(1.8rem, 2.5vw, 3rem);
+  font-size: clamp(1.8rem, 6vw, 3rem);
   letter-spacing: 1px;
   margin-bottom: 0.4rem;
   color: #e50914;
@@ -28,7 +28,7 @@ header h1 {
 
 header p,
 [aria-label="Perfis de usuário"] {
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
   color: #e5e5e5;
 }
 
@@ -36,11 +36,20 @@ header p {
   margin-bottom: 1.2rem;
 }
 
-nav.profiles {
+.profiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.9rem;
   margin-top: 0.8rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .profile {
@@ -50,12 +59,6 @@ nav.profiles {
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.profile:hover,
-.profile:focus-visible {
-  transform: translateY(-4px) scale(1.02);
-  outline: none;
 }
 
 .profile figure {
@@ -73,6 +76,7 @@ nav.profiles {
 
 img:hover {
     border-color: rgba(255, 255, 255, 0.98);
+      transform: translateY(-4px) scale(1.00);
 }
 
 .profile figcaption {
