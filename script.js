@@ -32,5 +32,22 @@ function applySavedTheme() {
   }
 }
 
+function pegarPerfil(event) {
+  // Pega o elemento <a> clicado
+  const profileLink = event.currentTarget;
+  
+  // Extrai o nome do perfil (texto da figcaption)
+  const nomePerfil = profileLink.querySelector('figcaption').textContent;
+  
+  // Extrai a imagem do perfil (src do img)
+  const imagemPerfil = profileLink.querySelector('img').src;
+  
+  // Armazena no localStorage
+  localStorage.setItem('perfilAtivoNome', nomePerfil);
+  localStorage.setItem('perfilAtivoImagem', imagemPerfil);
+  
+  console.log(`Perfil armazenado: ${nomePerfil}`);
+}
+
 // Executa a função para aplicar o tema salvo assim que o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', applySavedTheme);
